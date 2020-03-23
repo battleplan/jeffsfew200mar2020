@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'few200';
+  titleForHeader = 'Front-End Web 200 with Angular: Progressive ITU';
 }
