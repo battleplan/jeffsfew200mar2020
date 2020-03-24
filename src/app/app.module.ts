@@ -9,6 +9,7 @@ import { ShoppingComponent } from './components/shopping/shopping.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ShoppingEntryComponent } from './components/shopping/components/shopping-entry/shopping-entry.component';
 import { ShoppingListComponent } from './components/shopping/components/shopping-list/shopping-list.component';
+import { ShoppingService } from './services/shopping.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { ShoppingListComponent } from './components/shopping/components/shopping
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
