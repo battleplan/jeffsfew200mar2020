@@ -10,7 +10,10 @@ import { NavComponent } from './components/nav/nav.component';
 import { ShoppingEntryComponent } from './components/shopping/components/shopping-entry/shopping-entry.component';
 import { ShoppingListComponent } from './components/shopping/components/shopping-list/shopping-list.component';
 import { ShoppingService } from './services/shopping.service';
-
+import { CounterComponent } from './components/counter/counter.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './reducers';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { ShoppingService } from './services/shopping.service';
     ShoppingComponent,
     NavComponent,
     ShoppingEntryComponent,
-    ShoppingListComponent
+    ShoppingListComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument()
   ],
   providers: [ShoppingService],
   bootstrap: [AppComponent]
